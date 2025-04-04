@@ -1,0 +1,48 @@
+{
+    "id": "did:web:bansalclothstore.com",
+    "@context": [
+      "https://www.w3.org/ns/did/v1",
+      {
+        "@base": "did:web:bansalclothstore.com"
+      }
+    ],
+    "service": [
+      {
+        "id": "#linkeddomains",
+        "type": "LinkedDomains",
+        "serviceEndpoint": {
+          "origins": [
+            "https://bansalclothstore.com/"
+          ]
+        }
+      },
+      {
+        "id": "#hub",
+        "type": "IdentityHub",
+        "serviceEndpoint": {
+          "instances": [
+            "https://hub.did.msidentity.com/v1.0/eaa5dada-5a8a-441f-a7c0-5404ebca8ff4"
+          ]
+        }
+      }
+    ],
+    "verificationMethod": [
+      {
+        "id": "#c3c314ba302a4751bcc118d1026ee1e9vcSigningKey-1c233",
+        "controller": "did:web:bansalclothstore.com",
+        "type": "JsonWebKey2020",
+        "publicKeyJwk": {
+          "crv": "P-256",
+          "kty": "EC",
+          "x": "QzdCmhBuNxt4KmlT2Jyg5BT0lZ2LB5L4keN16E3OkU4",
+          "y": "YlU8jOaGW2Nsp49c2mKKastfmvdVVju1z4NvpZlntGs"
+        }
+      }
+    ],
+    "authentication": [
+      "#c3c314ba302a4751bcc118d1026ee1e9vcSigningKey-1c233"
+    ],
+    "assertionMethod": [
+      "#c3c314ba302a4751bcc118d1026ee1e9vcSigningKey-1c233"
+    ]
+  }
